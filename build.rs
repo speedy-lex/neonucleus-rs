@@ -43,6 +43,7 @@ fn main() {
     let out = PathBuf::from(env::var("OUT_DIR").unwrap());
     let nn_bindings = bindgen::builder()
         .header("neonucleus/src/neonucleus.h")
+        .clang_arg("-fvisibility=default")
         .generate()
         .unwrap();
 
