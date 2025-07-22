@@ -1,0 +1,3 @@
+[submodule "neonucleus"]
+	path = neonucleus
+	url = https://github.com/NeoFlock/neonucleus
