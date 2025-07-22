@@ -3,7 +3,7 @@ use std::process::Command;
 use std::path::PathBuf;
 
 fn main() {
-    let neonucleus_dir = PathBuf::from("neonucleus");
+    let neonucleus_dir = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap()).join("neonucleus");
 
     let status = Command::new("zig")
         .arg("build")
