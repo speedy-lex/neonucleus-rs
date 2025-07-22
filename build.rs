@@ -15,7 +15,7 @@ fn main() {
 
     assert!(status.success(), "Zig build failed");
 
-    let out_dir = neonucleus_dir.join("zig-out/lib");
+    let out_dir = neonucleus_dir.join("zig-out").join("lib");
     let out = PathBuf::from(env::var("OUT_DIR").unwrap());
     let nn_bindings = bindgen::builder()
         .header("neonucleus/src/neonucleus.h")
