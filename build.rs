@@ -18,6 +18,7 @@ fn target_to_zig(target: &str) -> &str {
         "x86_64-unknown-linux-gnu" => "x86_64-linux-gnu",
         "aarch64-apple-darwin" => "aarch64-macos",
         "wasm32-unknown-unknown" => "wasm32-freestanding",
+        "wasm32-unknown-emscripten" => "wasm32-emscripten",
         // TODO: more mappings
         _ => target,
     }
