@@ -2,6 +2,8 @@ use std::env;
 use std::process::Command;
 use std::path::PathBuf;
 
+use bindgen::MacroTypeVariation;
+
 fn opt_level_to_zig(opt_level: &str) -> &str {
     match opt_level {
         "0" => "Debug",
@@ -52,7 +54,7 @@ fn main() {
     let lua_bindings = bindgen::builder()
         .header("neonucleus/foreign/lua54/lua.h")
         .header("neonucleus/foreign/lua54/lualib.h")
-        .header("neonucleus/foreign/lua54/lauxlib.h")
+        .default_macro_constant_type(MacroTypeVariation::Signed)
         .generate()
         .unwrap();
 
