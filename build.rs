@@ -45,6 +45,7 @@ fn main() {
     let nn_bindings = bindgen::builder()
         .header("neonucleus/src/neonucleus.h")
         .clang_arg("-fvisibility=default")
+        .blocklist_type("max_align_t")
         .generate()
         .unwrap();
 
