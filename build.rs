@@ -51,6 +51,8 @@ fn main() {
 
     let lua_bindings = bindgen::builder()
         .header("neonucleus/foreign/lua54/lua.h")
+        .header("neonucleus/foreign/lua54/lualib.h")
+        .header("neonucleus/foreign/lua54/lauxlib.h")
         .generate()
         .unwrap();
 
