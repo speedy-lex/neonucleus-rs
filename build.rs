@@ -55,6 +55,7 @@ fn main() {
         .header("neonucleus/foreign/lua54/lua.h")
         .header("neonucleus/foreign/lua54/lualib.h")
         .default_macro_constant_type(MacroTypeVariation::Signed)
+        .clang_arg("-fvisibility=default")
         .generate()
         .unwrap();
 
