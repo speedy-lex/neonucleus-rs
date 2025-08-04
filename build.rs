@@ -46,6 +46,7 @@ fn main() {
         .header("neonucleus/src/neonucleus.h")
         .clang_arg("-fvisibility=default")
         .blocklist_type("max_align_t")
+        .default_macro_constant_type(bindgen::MacroTypeVariation::Signed)
         .generate()
         .unwrap();
 
